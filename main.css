@@ -1,0 +1,214 @@
+  @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Yeseva+One&display=swap');
+*{
+    background-color:rgb(221, 250, 201);
+    box-sizing:border-box;
+    font-family: 'Raleway', sans-serif;
+}
+:root{
+    --gradient: linear-gradient( 45deg, #78fa6c, #0a970a, #ebe8e7, #badb7c, #12702a );
+}
+html{
+    height:100%;
+    padding:0;
+}
+body{
+    background-image:url(images/palm1.png);
+    background-blend-mode:darken;
+    background-repeat:none;
+    background-size:cover;
+    height:100%;
+}
+main{
+    animation:main 4.5s ease-in;
+}
+@keyframes main{
+    0%{
+        opacity:0;
+    }
+    50%{
+        opacity:.25;
+    }
+    100%{
+        opacity:1;
+    }
+}
+header{
+    background-image:var(--gradient);
+    padding:10px;
+    margin:0;
+    border-radius:95px;
+}
+h1{
+    background-color:transparent;
+    text-align:center;
+    font-family: 'Yeseva One', cursive;
+    padding:10px;
+    animation: fade-in 1 3s ease;
+}
+@keyframes fade-in{
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    1% {
+        display: block;
+        opacity: 0;
+    }
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+h2{
+    text-align:center;
+    background-color:transparent;
+}
+.span1{
+    background-color:transparent;
+    animation: wd 1 3s ease;
+}
+@keyframes wd{
+    0%{
+        transform:translateX(-150%);
+    }
+    100%{
+        transform:translate(0);
+    }
+}
+.span2{
+    background-color:transparent;
+    animation: js 1 3s ease;
+}
+@keyframes js{
+    0%{
+        transform:translateX(300%);
+    }
+    100%{
+        transform:translate(0);
+    }
+}
+.intro{
+    text-align:center;
+}
+h3{
+    font-family: 'Yeseva One', cursive;
+    text-align:center;
+    padding:10px;
+}
+.lab-grid{
+    display:grid;
+    grid-template-columns: repeat(3, minmax(40px,250px));
+}
+.lab1{
+    background-color:#0a970a;
+    grid-column:1;
+    grid-row:1;
+}
+.lab2{
+    grid-column: 2;
+    grid-row:1
+}
+.lab3{
+    background-color:#78fa6c;
+    grid-column: 3;
+    grid-row:1;
+}
+.lab4{
+    grid-column:1;
+    grid-row:2;
+}
+.lab5{
+    background-color:white;
+    grid-column:2;
+    grid-row:2;
+}
+.lab6{
+    grid-column:3;
+    grid-row:2;
+}
+.lab7{
+    background-color:#78fa6c;
+    grid-column:1;
+    grid-row:3;
+}
+.lab8{
+    grid-column:2;
+    grid-row:3;
+}
+.lab9{
+    background-color:#0a970a;
+    grid-column:3;
+    grid-row:3;
+}
+.project_grid{
+    display:grid;
+    grid-template-columns: repeat(2, minmax(40px,250px));
+}
+.proj1{
+    background-color:#0a970a;
+    grid-column:1;
+    grid-row:1;
+}
+.proj2{
+    background-color:#78fa6c;
+    grid-column:2;
+    grid-row:1;
+}
+.proj3{
+    background-color:#78fa6c;
+    grid-column:1;
+    grid-row:2;
+}
+.proj4{
+    background-color:#0a970a;
+    grid-column:2;
+    grid-row:2;
+}
+.about{
+    padding:10px;
+}
+ul{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+}
+li{
+    border: 2px solid white;
+    padding:10px;
+    text-align:center;
+    transition: transform 2s;
+}
+li:hover{
+    -webkit-transform: scale(1.5);
+    transform:scale(1.2);
+}
+a{
+    background-color:transparent;
+    text-decoration:none;
+    color:rgb(0, 0, 0);
+}
+a:hover{
+    font-family: 'Yeseva One', cursive;
+}
+footer{
+    align-items:baseline;
+}
+footer p{
+    font-family: 'Yeseva One', cursive;
+    background-image:var(--gradient);
+    padding:10px;
+    text-align:center;
+}
+@media screen and (min-width:700px){
+    body{
+        background-image:url(images/palm.png);
+    }
+    .hw{
+        display:flex;
+        justify-content:space-evenly;
+    }
+    li{
+        padding:20px 0;
+    }
+}
