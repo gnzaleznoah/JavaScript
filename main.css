@@ -1,6 +1,5 @@
   @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Yeseva+One&display=swap');
 *{
-    background-color:rgb(221, 250, 201);
     box-sizing:border-box;
     font-family: 'Raleway', sans-serif;
 }
@@ -20,6 +19,7 @@ body{
 }
 main{
     animation:main 4.5s ease-in;
+    height:75%;
 }
 @keyframes main{
     0%{
@@ -63,6 +63,27 @@ h2{
     text-align:center;
     background-color:transparent;
 }
+
+.waviy {
+    position: relative;
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+  }
+  .waviy span {
+    position: relative;
+    display: inline-block;
+    animation: waviy 2s 4 4s;
+    animation-delay: calc(.1s * var(--i));
+    
+  }
+  @keyframes waviy {
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-20px)
+    }
+  }
+
 .span1{
     background-color:transparent;
     animation: wd 1 3s ease;
@@ -96,9 +117,13 @@ h3{
     padding:10px;
 }
 .lab-grid{
+    background-color:#badb7c;
     display:grid;
     grid-template-columns: repeat(3, minmax(40px,250px));
-}
+    grid-gap:10px;
+} 
+
+
 .lab1{
     background-color:#0a970a;
     grid-column:1;
@@ -141,8 +166,10 @@ h3{
     grid-row:3;
 }
 .project_grid{
+    background-color:#badb7c;
     display:grid;
-    grid-template-columns: repeat(2, minmax(40px,250px));
+    grid-template-columns: repeat(3, minmax(40px,250px));
+    grid-gap:10px;
 }
 .proj1{
     background-color:#0a970a;
@@ -191,9 +218,41 @@ a{
 a:hover{
     font-family: 'Yeseva One', cursive;
 }
-footer{
-    align-items:baseline;
-}
+#grid {
+    height:30%;
+    transition: 500ms;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 3px;
+    background:#ebe8e7;
+  }
+  
+  :where(.left, .center, .right) {
+    background:transparent;
+    transition: 300ms;
+  }
+  
+  :where(.left, .center, .right):hover {
+    background:transparent;
+  }
+  .left{
+    grid-row:2;
+  }
+  #grid:has(.left:hover) {
+    grid-template-rows: 1fr 0.5fr 0.5fr;
+  }
+  .center{
+    grid-row:1;
+  }
+  #grid:has(.center:hover) {
+    grid-template-rows: 0.5fr 1fr 0.5fr;
+  }
+  .right{
+    grid-row:3;
+  }
+  #grid:has(.right:hover) {
+    grid-template-rows: 0.5fr 0.5fr 2fr;
+  }
 footer p{
     font-family: 'Yeseva One', cursive;
     background-image:var(--gradient);
@@ -211,4 +270,30 @@ footer p{
     li{
         padding:20px 0;
     }
+    #grid {
+        height:100%;
+        transition: 500ms;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 3px;
+        background:#ebe8e7;
+      }
+      .left{
+        grid-row:1;
+      }
+      #grid:has(.left:hover) {
+        grid-template-columns: 2fr 0.5fr 0.5fr;
+      }
+      .center{
+        grid-row:1;
+      }
+      #grid:has(.center:hover) {
+        grid-template-columns: 0.5fr 2fr 0.5fr;
+      }
+      .right{
+        grid-row:1;
+      }
+      #grid:has(.right:hover) {
+        grid-template-columns: 0.5fr 0.5fr 2fr;
+      }
 }
