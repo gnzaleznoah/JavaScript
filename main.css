@@ -121,9 +121,12 @@ h3{
     display:grid;
     grid-template-columns: repeat(3, minmax(40px,250px));
     grid-gap:10px;
+    padding:10px;
+    transition: padding 1s;
 } 
-
-
+.lab-grid:hover, :focus{
+    padding: 4rem 10px;
+}
 .lab1{
     background-color:#0a970a;
     grid-column:1;
@@ -166,10 +169,16 @@ h3{
     grid-row:3;
 }
 .project_grid{
+    justify-content:space-evenly;
     background-color:#badb7c;
     display:grid;
     grid-template-columns: repeat(3, minmax(40px,250px));
     grid-gap:10px;
+    padding:10px;
+    transition: padding 1s;
+}
+.project_grid:hover, :focus{
+    padding: 4rem 10px;
 }
 .proj1{
     background-color:#0a970a;
@@ -219,7 +228,7 @@ a:hover{
     font-family: 'Yeseva One', cursive;
 }
 #grid {
-    height:30%;
+    height:100%;
     transition: 500ms;
     display: grid;
     grid-template-rows: .25fr .25fr .25fr;
@@ -238,20 +247,26 @@ a:hover{
   .left{
     grid-row:2;
   }
-  #grid:has(.left:hover) {
-    grid-template-rows: .5r 0.25fr 0.25fr;
+.left:hover, :focus{
+    margin:1rem 0;
+}
+  #grid:has(.left:hover, :focus) {
+    grid-template-rows: .25r 1fr 0.25fr;
   }
   .center{
     grid-row:1;
   }
-  #grid:has(.center:hover) {
-    grid-template-rows: 0.5fr 1fr 0.5fr;
+  #grid:has(.center:hover, :focus) {
+    grid-template-rows: 0.5fr .25fr 0.25fr;
   }
   .right{
     grid-row:3;
   }
-  #grid:has(.right:hover) {
-    grid-template-rows: 0.5fr 0.5fr 2fr;
+.right:hover, :focus{
+    margin:1rem 0;
+}
+  #grid:has(.right:hover, :focus) {
+    grid-template-rows: 0.25fr 0.25fr 2fr;
   }
 footer p{
     font-family: 'Yeseva One', cursive;
@@ -281,19 +296,19 @@ footer p{
       .left{
         grid-row:1;
       }
-      #grid:has(.left:hover) {
+      #grid:has(.left:hover, :focus) {
         grid-template-columns: 2fr 0.5fr 0.5fr;
       }
       .center{
         grid-row:1;
       }
-      #grid:has(.center:hover) {
+      #grid:has(.center:hover, :focus) {
         grid-template-columns: 0.5fr 2fr 0.5fr;
       }
       .right{
         grid-row:1;
       }
-      #grid:has(.right:hover) {
+      #grid:has(.right:hover, :focus) {
         grid-template-columns: 0.5fr 0.5fr 2fr;
       }
 }
