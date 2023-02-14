@@ -35,7 +35,7 @@ main{
 header{
     background-image:var(--gradient);
     padding:10px;
-    margin:0;
+    margin-bottom:1rem;
     border-radius:95px;
 }
 h1{
@@ -222,7 +222,7 @@ a:hover{
     height:30%;
     transition: 500ms;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: .25fr .25fr .25fr;
     gap: 3px;
     background:#ebe8e7;
   }
@@ -239,7 +239,7 @@ a:hover{
     grid-row:2;
   }
   #grid:has(.left:hover) {
-    grid-template-rows: 1fr 0.5fr 0.5fr;
+    grid-template-rows: .5r 0.25fr 0.25fr;
   }
   .center{
     grid-row:1;
