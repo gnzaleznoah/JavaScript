@@ -278,6 +278,14 @@ footer p{
     body{
         background-image:url(images/palm.png);
     }
+    header{
+        display:flex;
+        justify-content:space-around;
+    }
+    h2{
+        display:flex;
+        justify-content:space-evenly;
+    }
     .hw{
         display:flex;
         justify-content:space-evenly;
