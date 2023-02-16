@@ -280,11 +280,7 @@ footer p{
     }
     header{
         display:flex;
-        justify-content:space-around;
-    }
-    h2{
-        display:flex;
-        justify-content:space-evenly;
+        justify-content:center;
     }
     .hw{
         display:flex;
